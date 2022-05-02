@@ -8,6 +8,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.br.CPF;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,7 +26,7 @@ public class Client {
 
     @Column(name="cpf")
     @NotBlank(message = "Cpf é obrigatório")
-    @Length(message="Cpf inválido (obs: utilize apenas números).",max=11, min = 11)
+    @CPF()
     String cpf;
 
     @Column(name="nome")

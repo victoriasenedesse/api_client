@@ -13,6 +13,6 @@ CREATE TABLE cliente(
     nome varchar(50) NOT NULL,
     cpf varchar(20) NOT NULL,
     sexo varchar(20) NOT NULL,
-    nascimento date,
+    nascimento date NOT NULL,
     PRIMARY KEY (id)
 );
