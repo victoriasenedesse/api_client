@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import com.example.api_client.domain.dto.ResponseDto;
 import com.example.api_client.domain.dto.ClientDto;
+import com.example.api_client.domain.entity.Address;
 import com.example.api_client.domain.entity.Client;
 import com.example.api_client.domain.enumeration.Status;
 import com.example.api_client.domain.repository.ClientRepository;
@@ -27,6 +28,8 @@ public class ClientService {
     ClientRepository clientRepository;
 
     public ResponseDto saveClient(Client client) {
+        Address address = client.getEndereco();
+        address.setCliente(client);
         responseDto.setId(clientRepository.save(client).getId());
         responseDto.setMenssage("Cliente incluído com sucesso...");
         responseDto.setStatus(Status.SUCCESS.value());
