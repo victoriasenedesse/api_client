@@ -28,8 +28,6 @@ public class ClientService {
     ClientRepository clientRepository;
 
     public ResponseDto saveClient(Client client) {
-        Address address = client.getEndereco();
-        address.setCliente(client);
         responseDto.setId(clientRepository.save(client).getId());
         responseDto.setMenssage("Cliente incluído com sucesso...");
         responseDto.setStatus(Status.SUCCESS.value());

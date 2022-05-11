@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AddressDto {
     Long id;
-    Long cliente_id;
     String cep;
     String rua;
     String bairro;

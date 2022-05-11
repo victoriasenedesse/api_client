@@ -17,5 +17,5 @@ public class ClientDto {
     String nome;
     String sexo;
     Date nascimento; 
-    Address endereco;
+    AddressDto endereco;
 }

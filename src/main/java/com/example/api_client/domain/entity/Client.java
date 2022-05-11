@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -28,8 +29,8 @@ public class Client {
     Long id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinCollmn(name = "endereco_id", referencedColumnName = "id")
-    private Address endereco;
+    @JoinColumn(name = "endereco_id", referencedColumnName = "id")
+    Address endereco;
 
     @Column(name="cpf")
     @NotBlank(message = "Cpf é obrigatório")
