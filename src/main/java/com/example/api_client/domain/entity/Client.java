@@ -27,8 +27,8 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @OneToOne(mappedBy = "cliente", cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinCollmn(name = "endereco_id", referencedColumnName = "id")
     private Address endereco;
 
     @Column(name="cpf")
