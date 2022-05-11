@@ -25,9 +25,7 @@ public class Address {
     @Column(name = "id")
     private Long id;
 
-    @OneToOne
-    @JoinColumn(name = "cliente_id")
-    @JsonBackReference
+    @OneToOne(mappedBy="endereco")
     private Client cliente;
 
     @Column(name="cep")
@@ -58,8 +56,4 @@ public class Address {
     @NotBlank(message = "UF é obrigatório.")
     @Length(message="UF inválido.",max=2, min=2)
     String uf;
-
-    public void setCliente(Client client) {
-        this.cliente = client;
-    }
 }
