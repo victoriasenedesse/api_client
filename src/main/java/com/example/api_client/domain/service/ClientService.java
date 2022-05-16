@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import com.example.api_client.domain.dto.ResponseDto;
 import com.example.api_client.domain.dto.ClientDto;
+import com.example.api_client.domain.entity.Address;
 import com.example.api_client.domain.entity.Client;
 import com.example.api_client.domain.enumeration.Status;
 import com.example.api_client.domain.repository.ClientRepository;
